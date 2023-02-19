@@ -2,7 +2,7 @@
 
 YAML + JQ Based End-To-End API Testing.
 
-**Full documentation is available on the official website:**
+**Full documentation is available on the official website: https://abhimanyu003.github.io/probe/**
 
 
 ![](./media/banner-compressed.png)
@@ -82,7 +82,7 @@ Visit [Release!](https://github.com/abhimanyu003/probe/releases)
 
 ## :boom: Usages
 
-**Full documentation is available on the official website:**
+**Full documentation is available on the official website: https://abhimanyu003.github.io/probe/**
 
 
 **Quick Example**
