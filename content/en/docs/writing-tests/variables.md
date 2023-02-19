@@ -8,7 +8,7 @@ weight: 3
 
 It's possible to have variables `${ VAR }` in your test, sometime you want to export few property from header or body to next stage.
 
-**Types of Variables**
+Types of Variables
 
 * Env  Variables. ( System Variable ) `${ env:VAR }`
 * Test Variables ( Common for all stages ).
@@ -16,7 +16,7 @@ It's possible to have variables `${ VAR }` in your test, sometime you want to ex
 
 Exported variable can be used in stage body or header
 
-```
+```yaml
 ${ env:VAR } // retrieves the value of the os/system variable.
 ${ VAR } // run time exported variable
 ```
@@ -26,7 +26,7 @@ ${ VAR } // run time exported variable
 It's possible to load OS/system level variable in test. This is also helpful
 and allow you to set/load many variable even before test starts
 
-```
+```yaml
 ${env:USER}
 ```
 
@@ -40,7 +40,6 @@ assert:
     - select: .form.username
       want: ${env:USER}
 ```
-
 
 ## Test Variables
 
@@ -92,6 +91,7 @@ assert:
       want: "abhimanyu"
       exportAs: "username" # Exporting right from assert
 ```
+
 ### Example: Run Time Variables
 
 ```yaml

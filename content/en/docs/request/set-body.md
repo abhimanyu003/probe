@@ -36,14 +36,14 @@ stages:
 
 To set the correct content type make to to update the headers as well.
 
-**For JSON**
+### For JSON
 
 ```yaml
       headers:
         content-type: application/json
 ```
 
-**For XML**
+### For XML
 
 ```yaml
       headers:

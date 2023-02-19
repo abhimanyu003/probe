@@ -15,7 +15,6 @@ request:
 
 ## Example
 
-
 ```yaml
 name: Set Bearer Auth Token
 stages:

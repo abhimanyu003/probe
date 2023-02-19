@@ -66,6 +66,6 @@ access-control-allow-credentials: true
 
 To disable logs you can use CLI flag `--disableLogs`
 
-```
+```sh
 probe run --disableLogs
 ```

@@ -11,14 +11,13 @@ weight: 200
 Assert if all the required keys exists in our JSON.
 Here we are not worried about values here, but only `keys`
 
-**jq operation**
+### jq operation
 
-```
+```sh
 . | keys
 ```
 
-
-**Example:**
+### Example
 
 ```yaml
 name: validate json keys
@@ -48,11 +47,10 @@ stages:
             ]
 ```
 
-
-**Tip**
+#### Tip
 
 You can also sort keys using jq operations:
 
-```
+```sh
 . | keys | sort
 ```

@@ -14,7 +14,6 @@ In this section, we'll discuss the globally available functions that allow you t
 * afterEach `run after each stage`
 * afterAll `run after all stages`
 
-
 ```yaml
 name: test setup and teardown
 

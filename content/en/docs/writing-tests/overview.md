@@ -49,14 +49,11 @@ stages:
       status: 200
 ```
 
-
 * Running test
 
-
+```sh
+probe run
 ```
-$ probe run
-```
-
 
 ## Stages
 
@@ -82,7 +79,6 @@ stages: # a test can multiple stages
 ### Example: Single Stage Test
 
 * Create a file with name `main.yaml` ( filename can be anything )
-
 
 ```yaml
 name: Writing Test
@@ -116,9 +112,9 @@ stages:
     assert:
       status: 200
 ```
+
 * Running test
 
+```sh
+probe run
 ```
-$ probe run
-```
-

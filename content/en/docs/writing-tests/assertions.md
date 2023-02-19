@@ -10,15 +10,12 @@ Probe use `jq` as JSON query processor
 
 `jq` is like sed for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that sed, awk, grep and friends let you play with text.
 
-
 👉 More details on jq: [https://stedolan.github.io/jq/](https://stedolan.github.io/jq/)
 
-
-**Some JQ Playgrounds**
+Some JQ Playgrounds
 
 * [JQPlay](https://jqplay.org/)
 * [JQTerm](https://jqterm.com/?query=.) ( amazing one )
-
 
 Lets say if you have API JSON output which looks like this.
 
@@ -31,7 +28,7 @@ Lets say if you have API JSON output which looks like this.
 }
 ```
 
-**Use "probe" to test**
+Use "probe" to test
 
 * Create a file with name `main.yaml` ( filename can be anything )
 
@@ -49,6 +46,7 @@ stages:
         - select: .title # jq query language
           want: "delectus aut autem"
 ```
+
 > 💡 Here `select: .userId` and `select: .title` is jq query language.
 
 ## Assert Response Status Code
@@ -72,7 +70,6 @@ stages:
     assert:
       status: 200 # assert of response status code
 ```
-
 
 ## Assert Response Headers
 
@@ -106,7 +103,7 @@ stages:
 
 You can validate JSON fields, using `constrain` tags
 
-```
+```sh
 constrain:json
 ```
 

@@ -22,7 +22,6 @@ request:
 
 ## Example
 
-
 ```yaml
 name: Set Query Param
 stages:

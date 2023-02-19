@@ -7,12 +7,13 @@ toc: true
 ---
 
 Probe support wide variety of OS
+
 * 'linux', 'darwin', 'windows'
 * '386', 'amd64', 'arm64'
 
 #### Auto Install
 
-```
+```sh
 curl -L https://raw.githubusercontent.com/abhimanyu003/probe/main/install.sh | bash
 ```
 
@@ -20,20 +21,20 @@ curl -L https://raw.githubusercontent.com/abhimanyu003/probe/main/install.sh | b
 
 #### Brew
 
-```
+```sh
 brew install abhimanyu003/tap/probe
 ```
 
 #### Scoop
 
-```
+```sh
 scoop bucket add probe https://github.com/abhimanyu003/scoop-bucket.git
 scoop install probe
 ```
 
 #### Arch Linux
 
-```
+```sh
 yay -S probe-bin
 ```
 
@@ -41,14 +42,14 @@ yay -S probe-bin
 
 > At this point we have to alias while using snap
 
-```
+```sh
 sudo snap install go-probe
 sudo snap alias go-probe.probe probe
 ```
 
 #### Go Install
 
-```
+```sh
 go install github.com/abhimanyu003/probe@latest
 ```
 
@@ -58,7 +59,7 @@ Use wget to download, gzipped pre-compiled binaries.
 
 For instance, `VERSION=v0.0.1` and `BINARY=probe_0.0.1_linux_amd64`
 
-```
+```sh
 wget https://github.com/abhimanyu003/probe/releases/download/${VERSION}/${BINARY}.tar.gz -O - |\
   tar xz && mv probe /usr/bin/probe
 ```
@@ -71,6 +72,7 @@ Download the pre-compiled binaries from the [Release!](https://github.com/abhima
 to the desired location.
 
 You can download
+
 * DEB
 * RPM
 * Pre-compiled binary

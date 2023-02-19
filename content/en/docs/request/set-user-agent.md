@@ -14,7 +14,6 @@ request:
 
 ## Example
 
-
 ```yaml
 name: Set User Agent
 stages:

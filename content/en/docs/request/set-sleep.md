@@ -14,7 +14,6 @@ request:
 
  `sleepAfter` will sleep after stage is completed
 
-
 ```yaml
 name: Set Headers
 stages:
@@ -32,7 +31,7 @@ request:
 
 ## Example
 
-**sleepAfter example**
+sleepAfter example
 
 ```yaml
 name: Set Sleep
@@ -44,8 +43,7 @@ stages:
       sleepAfter: 2000
 ```
 
-**sleepAfter stage is completed example**
-
+sleepAfter stage is completed example
 
 ```yaml
 name: Set Sleep
@@ -57,7 +55,7 @@ stages:
       method: GET
 ```
 
-**Sleep after each request for 10 times example**
+Sleep after each request for 10 times example
 
 > This will sleep for 2000 millisecond after each request
 

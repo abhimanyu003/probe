@@ -23,7 +23,6 @@ request:
 
 ## Example
 
-
 ```yaml
 name: Set Headers
 stages:

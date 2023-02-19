@@ -8,7 +8,7 @@ toc: true
 
 ## Run
 
-```
+```sh
 Usage:
   probe run [flags]
 
@@ -20,53 +20,50 @@ Flags:
   -v, --test.v          Get verbose output of the tests.
 ```
 
-**Run all tests in current folder and sub-directory**
+### Run all tests in current folder and sub-directory
 
-```
+```sh
 probe run
 ```
 
-**Run specific test file**
+### Run specific test file
 
-
-```
+```sh
 probe run /path/to/test.yaml
 ```
 
-**Disable Logs**
+### Disable Logs
 
-```
+```sh
 probe run --disableLogs
 ```
 
-**Verbose output**
+### Verbose output
 
-```
+```sh
 probe run -v
 ```
 
-**Failfast**
+### Failfast
 
-```
+```sh
 probe run --failfast
 ```
 
-**Limit parallel run**
+### Limit parallel run
 
-```
+```sh
 probe run  --parallel 2
 ```
 
-## Help
+### Help
 
-
-```
+```sh
 probe help
 ```
 
+### Version
 
-## Version
-
-```
+```sh
 probe version
 ```

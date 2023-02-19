@@ -5,7 +5,6 @@ description: "This article will introduce how to set form data."
 
 > Note: the form data of GET, HEAD, and OPTIONS requests will be ignored by default.
 
-
 ```yaml
 request:
   formData:

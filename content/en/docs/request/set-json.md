@@ -7,7 +7,7 @@ You can set `json` using `bodyJson` tag inside of request.
 
 This will auto add header
 
-```
+```sh
 Content-Type: application/json; charset=utf-8
 ```
 
