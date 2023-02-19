@@ -1,6 +1,6 @@
 # Probe
 
-YAML + JQ Based End-To-End API Testing.
+Simplified End-to-End Test Using YAML and JQ.
 
 **Full documentation is available on the official website: https://abhimanyu003.github.io/probe/**
 
