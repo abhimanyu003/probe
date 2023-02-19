@@ -1,0 +1,60 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead"><strong>{{ .Params.lead | safeHTML }}</strong></p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="/docs/{{ if .Site.Params.options.docsVersioning }}{{ .Site.Params.docsVersion }}/{{ end }}prologue/install/" role="button">Get Started</a>
+      <p class="meta">Support Linux, Windows, Mac</p>
+      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/abhimanyu003/probe">GitHub</a></p>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+<section class="section section-sm">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4">Simple</h2>
+        <p>With Probe, you can write API tests using a simple YAML and JQ format that will save you time and effort. Plus, Probe comes with its own logging and request builder, making testing even easier and more efficient.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">JQ Support ⚡️</h2>
+        <p>Probe support <a href="https://stedolan.github.io/jq/">JQ</a>  is like sed for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that sed, awk, grep and friends let you play with text</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Multi Stages</h2>
+        <p>Supports multiple stages, which allows you test multiple end-points and features in a single test. In that way you can validate data and responses of multiple systems as single test/feature.</p>
+      </div>
+    </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-5">
+        <h2 class="h4">Request Builder</h2>
+        <p>Probe comes with it's request builder which allows you to have fine grain control over HTTP requests. Making testing even easier and more efficient.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Variables</h2>
+        <p>You can easily export values from headers and body as variables, and pass them on to the next stage of your tests.</p>
+      </div>
+      <div class="col-lg-5">
+        <h2 class="h4">Logs</h2>
+        <p>Easily generate on-demand logs for all stages and HTTP requests with our platform. With comprehensive details about each request, you can quickly and easily access the information you need to keep your system running smoothly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+{{ end }}
