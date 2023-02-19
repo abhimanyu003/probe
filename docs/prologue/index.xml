@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Prologue on</title><link>https://doks-child-theme.netlify.app/docs/prologue/</link><description>Recent content in Prologue on</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Tue, 06 Oct 2020 08:48:45 +0000</lastBuildDate><atom:link href="https://doks-child-theme.netlify.app/docs/prologue/index.xml" rel="self" type="application/rss+xml"/><item><title>Install</title><link>https://doks-child-theme.netlify.app/docs/prologue/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doks-child-theme.netlify.app/docs/prologue/install/</guid><description>Probe support wide variety of OS
+&amp;rsquo;linux&amp;rsquo;, &amp;lsquo;darwin&amp;rsquo;, &amp;lsquo;windows&amp;rsquo; &amp;lsquo;386&amp;rsquo;, &amp;lsquo;amd64&amp;rsquo;, &amp;lsquo;arm64&amp;rsquo; Auto Install #
+curl -L https://raw.githubusercontent.com/abhimanyu003/probe/main/install.sh | bash This script installs the latest release by default.
+Brew #
+brew install abhimanyu003/tap/probe Scoop #
+scoop bucket add probe https://github.com/abhimanyu003/scoop-bucket.git scoop install probe Arch Linux #
+yay -S probe-bin Snap #
+At this point we have to alias while using snap
+sudo snap install go-probe sudo snap alias go-probe.probe probe Go Install #
+go install github.</description></item><item><title>Commands</title><link>https://doks-child-theme.netlify.app/docs/prologue/commands/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doks-child-theme.netlify.app/docs/prologue/commands/</guid><description>Run #
+Usage: probe run [flags] Flags: --disableLogs Disable logs file entries. --failfast Do not start new tests after the first test failure. -h, --help help for run --parallel uint Maximum number of tests to run simultaneously -v, --test.v Get verbose output of the tests. Run all tests in current folder and sub-directory #
+probe run Run specific test file #
+probe run /path/to/test.yaml Disable Logs #
+probe run --disableLogs Verbose output #
+probe run -v Failfast #
+probe run --failfast Limit parallel run #
+probe run --parallel 2 Help #
+probe help Version #
+probe version</description></item></channel></rss>
