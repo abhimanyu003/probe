@@ -1,8 +1,8 @@
 package runner
 
 import (
+	"github.com/abhimanyu003/probe/cache"
 	"os"
-	"probe/cache"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

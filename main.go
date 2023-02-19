@@ -1,7 +1,7 @@
 package main
 
 import (
-	"probe/cmd"
+	"github.com/abhimanyu003/probe/cmd"
 )
 
 // version specify version of application using ldflags

@@ -3,8 +3,8 @@ package runner
 import (
 	"bytes"
 	"encoding/json"
-	"probe/cast"
-	"probe/jq"
+	"github.com/abhimanyu003/probe/cast"
+	"github.com/abhimanyu003/probe/jq"
 
 	"github.com/ohler55/ojg/oj"
 	spf "github.com/spf13/cast"

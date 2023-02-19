@@ -2,8 +2,8 @@ package runner
 
 import (
 	"fmt"
+	"github.com/abhimanyu003/probe/jq"
 	"net/http"
-	"probe/jq"
 	"strings"
 
 	cast2 "github.com/spf13/cast"

@@ -2,7 +2,7 @@ package runner
 
 import (
 	"fmt"
-	assert "probe/asserts"
+	assert "github.com/abhimanyu003/probe/asserts"
 	"strings"
 	"testing"
 

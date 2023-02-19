@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"probe/runner"
+	"github.com/abhimanyu003/probe/runner"
 
 	"github.com/spf13/cobra"
 )

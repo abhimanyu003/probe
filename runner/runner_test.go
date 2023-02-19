@@ -1,8 +1,8 @@
 package runner
 
 import (
+	"github.com/abhimanyu003/probe/cache"
 	"net/http"
-	"probe/cache"
 	"strings"
 	"testing"
 	"time"

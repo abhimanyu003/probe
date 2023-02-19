@@ -1,4 +1,4 @@
-module probe
+module github.com/abhimanyu003/probe
 
 go 1.19
 
