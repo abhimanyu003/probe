@@ -110,7 +110,7 @@ probe run main.yaml
 Here are some quick example that shows how you can use probe with YAML + JQ.
 This will help you get some quick idea on how you can write your API tests
 
-**JQ Example**
+##### JQ Example
 
 ```yaml
 name: JQ Example
@@ -136,45 +136,8 @@ stages:
 ```
 
 
-**Auth and get user**
 
-```yaml
-name: auth and get user
-stages:
-  - name: auth
-    request:
-      url: "https://dummyjson.com/auth/login"
-      method: POST
-      formData:
-        username: kminchelle
-        password: 0lelplR
-    assert:
-      status: 200
-    export:
-      body:
-        - select: .id
-          as: userId # setting id as userId variable
-        - select: .token
-          as: token # setting token id as variable
-
-  - name: Get Single User
-    request:
-      # using userId variable from previous stage
-      url: "https://dummyjson.com/users/${userId}"
-      method: GET
-      headers:
-        # using token from previous stage
-        token: ${token}
-    assert:
-      status: 200
-      body:
-        - select: .username
-          want: "kminchelle"
-        - select: .id
-          want: 15
-```
-
-**Form Data**
+#### Form Data
 
 
 ```yaml
