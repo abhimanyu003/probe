@@ -1,6 +1,6 @@
 # Probe
 
-Simplified End-to-End Test Using YAML and JQ.
+Simplified End-to-End Testing Using YAML and JQ.
 
 **Full documentation is available on the official website: https://abhimanyu003.github.io/probe/**
 
@@ -55,7 +55,7 @@ sudo snap alias go-probe.probe probe
 go install github.com/abhimanyu003/probe@latest
 ```
 
-#### wget
+#### Wget
 
 Use wget to download, gzipped pre-compiled binaries.
 
@@ -110,7 +110,7 @@ probe run main.yaml
 Here are some quick example that shows how you can use probe with YAML + JQ.
 This will help you get some quick idea on how you can write your API tests
 
-##### JQ Example
+#### JQ Example
 
 ```yaml
 name: JQ Example
