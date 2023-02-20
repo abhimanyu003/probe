@@ -7,11 +7,34 @@ Simplified End-to-End Testing Using YAML and JQ.
 
 ![](./media/banner-compressed.png)
 
+## All Features
+
+* **Cross-platform:** Runs on windows, mac and linux.
+* **JQ:** Full in-built [JQ](https://stedolan.github.io/jq/) support ( no need to install JQ ).
+* **Parallel:** Fast parallel testing for multiple tests
+* **Multi-Stages:** Call multiple systems and services in single test.
+* **Variables:** Supports env and user defined variables.
+* **Setup and Teardown:** Run things beforeEach, afterEach, beforeAll, afterAll, stages.
+* **Logs:** powerful logs that, dump the complete request and response content.
+* **Request Builder:** Easy request builder that allows you to set:
+  * Allow Insecure
+  * Basic Auth
+  * Bearer Auth Token
+  * Body
+  * Form Data
+  * Headers
+  * Json
+  * Query Param
+  * Sleep
+  * Timeout
+  * User-Agent
+  * Upload
+
 ## :battery: Install Probe
 
 Probe support wide variety of OS
-* 'linux', 'darwin', 'windows'
-* '386', 'amd64', 'arm64'
+* linux, darwin, windows
+* 386, amd64, arm64
 
 #### Auto Install
 
