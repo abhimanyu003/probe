@@ -35,7 +35,7 @@ nfpms:
     vendor: abhimanyu003
     homepage: "https://github.com/abhimanyu003/probe/"
     maintainer: "Abhimanyu Sharma <abhimanyusharma003@gmail.com>"
-    description: "YAML + JQ end-to-end API testing tool."
+    description: "Simplified Integration Testing Using YAML and JQ."
     license: MIT
     formats:
       - deb
@@ -50,7 +50,7 @@ brews:
     folder: Formula
     name: probe
     homepage: "https://github.com/abhimanyu003/probe"
-    description: "YAML + JQ end-to-end API testing tool."
+    description: "Simplified Integration Testing Using YAML and JQ."
     license: "MIT"
     skip_upload: auto
     commit_author:
@@ -69,7 +69,7 @@ scoop:
     name: "Abhimanyu Sharma"
     email: abhimanyusharma003@gmail.com
   homepage: "https://github.com/abhimanyu003/sttr"
-  description: "YAML + JQ end-to-end API testing tool."
+  description: "Simplified Integration Testing Using YAML and JQ."
   license: MIT
 
 snapcrafts:
@@ -77,9 +77,9 @@ snapcrafts:
     name: go-probe
     publish: true
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
-    summary: YAML + JQ end-to-end API testing tool.
+    summary: Simplified Integration Testing Using YAML and JQ.
     description: |
-      YAML + JQ end-to-end API testing tool.
+      Simplified Integration Testing Using YAML and JQ.
     grade: stable
     confinement: strict
     license: MIT
@@ -93,7 +93,7 @@ snapcrafts:
 aurs:
   - name: probe-bin
     homepage: "https://github.com/abhimanyu003/probe"
-    description: "YAML + JQ Based End-To-End API Testing."
+    description: "Simplified Integration Testing Using YAML and JQ."
     maintainers:
       - 'Abhimanyu Sharma <abhimanyusharma003@gmail.com>'
     license: "MIT"

@@ -9,7 +9,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "probe",
-	Short: "YAML + JQ end-to-end API testing tool.",
+	Short: "Simplified Integration Testing Using YAML and JQ.",
 }
 
 func Execute() {
