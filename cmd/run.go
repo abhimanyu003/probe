@@ -1,8 +1,10 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/abhimanyu003/probe/runner"
-
+	"github.com/gookit/goutil/fsutil"
+	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
 )
 
@@ -12,6 +14,7 @@ func init() {
 	runProbe.PersistentFlags().Bool("disableLogs", false, "Disable logs file entries.")
 	runProbe.PersistentFlags().Bool("failfast", false, "Do not start new tests after the first test failure.")
 	runProbe.PersistentFlags().Uint("parallel", 0, "Maximum number of tests to run simultaneously")
+	runProbe.PersistentFlags().String("env-file", "", "environment file to read and use as env in the containers (default .env)")
 }
 
 var runProbe = &cobra.Command{
@@ -19,10 +22,17 @@ var runProbe = &cobra.Command{
 	Short: "Run probe tests",
 	Long:  `Run probe test`,
 	Run: func(cmd *cobra.Command, args []string) {
+		fsutil.IsFile("")
 		path := "."
 		if len(args) > 0 {
 			path = args[0]
 		}
+		envPath, err := cmd.Flags().GetString("env-file")
+		if err != nil {
+			panic(err)
+		}
+		loadEnvFromGivenPath(envPath)
+
 		verbose, err := cmd.Flags().GetBool("test.v")
 		if err != nil {
 			panic(err)
@@ -49,4 +59,24 @@ var runProbe = &cobra.Command{
 		probe := runner.NewProbe(path, flags, nil)
 		probe.Execute()
 	},
+}
+
+func loadEnvFromGivenPath(envPath string) {
+	var err error
+	if len(envPath) > 0 {
+		if !fsutil.IsFile(envPath) {
+			panic(fmt.Sprintf("no env file found at given path %s", envPath))
+		}
+		err = godotenv.Load(envPath)
+		if err != nil {
+			panic(err)
+		}
+		return
+	}
+	if fsutil.IsFile(".env") {
+		err = godotenv.Load()
+		if err != nil {
+			panic(err)
+		}
+	}
 }

@@ -10,6 +10,7 @@ require (
 	github.com/h2non/gock v1.2.0
 	github.com/imroc/req/v3 v3.30.0
 	github.com/itchyny/gojq v0.12.11
+	github.com/joho/godotenv v1.5.1
 	github.com/juju/errors v1.0.0
 	github.com/muesli/cache2go v0.0.0-20221011235721-518229cd8021
 	github.com/ohler55/ojg v1.17.2
