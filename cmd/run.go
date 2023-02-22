@@ -3,9 +3,11 @@ package cmd
 import (
 	"fmt"
 	"github.com/abhimanyu003/probe/runner"
+	"github.com/gookit/goutil/cliutil"
 	"github.com/gookit/goutil/fsutil"
 	"github.com/joho/godotenv"
 	"github.com/spf13/cobra"
+	"os"
 )
 
 func init() {
@@ -22,32 +24,36 @@ var runProbe = &cobra.Command{
 	Short: "Run probe tests",
 	Long:  `Run probe test`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fsutil.IsFile("")
 		path := "."
 		if len(args) > 0 {
 			path = args[0]
 		}
 		envPath, err := cmd.Flags().GetString("env-file")
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 		loadEnvFromGivenPath(envPath)
 
 		verbose, err := cmd.Flags().GetBool("test.v")
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 		disableLogs, err := cmd.Flags().GetBool("disableLogs")
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 		failfast, err := cmd.Flags().GetBool("failfast")
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 		parallel, err := cmd.Flags().GetUint("parallel")
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 		flags := runner.Flags{
 			Verbose:     verbose,
@@ -65,18 +71,21 @@ func loadEnvFromGivenPath(envPath string) {
 	var err error
 	if len(envPath) > 0 {
 		if !fsutil.IsFile(envPath) {
-			panic(fmt.Sprintf("no env file found at given path %s", envPath))
+			cliutil.Redln(fmt.Sprintf("no env file found at given path %s", envPath))
+			os.Exit(1)
 		}
 		err = godotenv.Load(envPath)
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 		return
 	}
 	if fsutil.IsFile(".env") {
 		err = godotenv.Load()
 		if err != nil {
-			panic(err)
+			cliutil.Redln(err)
+			os.Exit(1)
 		}
 	}
 }
