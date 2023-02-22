@@ -11,6 +11,7 @@ It's possible to have variables `${ VAR }` in your test, sometime you want to ex
 Types of Variables
 
 * Env  Variables. ( System Variable ) `${ env:VAR }`
+* .env File Variables ( .env file variables ) `${ env:VAR }`
 * Test Variables ( Common for all stages ).
 * Run Time Variables / Stage Variables ( Exported on stage run time ).
 
@@ -29,6 +30,20 @@ and allow you to set/load many variable even before test starts
 ```yaml
 ${env:USER}
 ```
+
+Probe also supports loading of `.env` file as well.
+
+```shell
+probe run test.yaml --env-file="/path/to/.env"
+```
+
+```text
+URL=https://example.com
+USERNAME=abhmanyu003
+PASSWORD=admin123
+```
+
+By default, probe will check if there is any ".env" in the folder you are running test from and will auto load it.
 
 Here `${env:USER}` will load the value of `USER` present at OS level.
 

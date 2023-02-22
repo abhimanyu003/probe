@@ -3,8 +3,8 @@
 ## Homepage
 title = "Probe"
 titleSeparator = "-"
-titleAddition = "Probe YAML + JQ Based End-To-End API Testing."
-description = "YAML + JQ Based End-To-End API Testing."
+titleAddition = "Probe Simplified Integration Testing Using YAML and JQ."
+description = "Simplified Integration Testing Using YAML and JQ."
 
 ## Documentation
 # docsVersion = "0.3"
