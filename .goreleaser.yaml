@@ -68,7 +68,7 @@ scoop:
   commit_author:
     name: "Abhimanyu Sharma"
     email: abhimanyusharma003@gmail.com
-  homepage: "https://github.com/abhimanyu003/sttr"
+  homepage: "https://github.com/abhimanyu003/probe"
   description: "Simplified Integration Testing Using YAML and JQ."
   license: MIT
 
