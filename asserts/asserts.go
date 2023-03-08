@@ -1,3 +1,7 @@
+// Most of the code here in this file and package is fork of
+// https://github.com/stretchr/testify
+// LICENSE can be found here https://github.com/stretchr/testify/blob/master/LICENSE
+// It include slight customizations for "probe" specific use case.
 package assert
 
 import (
@@ -13,7 +17,7 @@ import (
 	"github.com/gookit/color"
 )
 
-// TestingT is an interface wrapper around *testing.T
+// TestingT is an interface wrapper around *testing.T.
 type TestingT interface {
 	Errorf(format string, args ...interface{})
 }
