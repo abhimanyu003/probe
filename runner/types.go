@@ -65,7 +65,7 @@ type Request struct {
 	AllowInsecure   bool              `json:"allowInsecure"`
 	BasicAuth       BasicAuth         `json:"basicAuth"`
 	Body            string            `json:"body"`
-	BodyJson        string            `json:"bodyJson"`
+	BodyJSON        string            `json:"bodyJson"`
 	Certificates    Certificates      `json:"certificates"`
 	FormData        map[string]any    `json:"formData"`
 	Headers         map[string]string `json:"headers"`

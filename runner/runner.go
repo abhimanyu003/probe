@@ -4,13 +4,14 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	assert "github.com/abhimanyu003/probe/asserts"
-	"github.com/abhimanyu003/probe/cache"
-	"github.com/abhimanyu003/probe/parser"
 	"os"
 	"strings"
 	"testing"
 	"time"
+
+	assert "github.com/abhimanyu003/probe/asserts"
+	"github.com/abhimanyu003/probe/cache"
+	"github.com/abhimanyu003/probe/parser"
 
 	"github.com/google/uuid"
 	"github.com/gookit/goutil/cliutil"
@@ -51,10 +52,10 @@ func (p *Probe) Execute() {
 	p.buildInternalTest()
 	testing.Init()
 
-	if p.flags.Verbose == true {
+	if p.flags.Verbose {
 		flag.Lookup("test.v").Value.Set("true")
 	}
-	if p.flags.FailFast == true {
+	if p.flags.FailFast {
 		flag.Lookup("test.failfast").Value.Set("true")
 	}
 	if p.flags.Parallel > 0 {
@@ -73,7 +74,7 @@ func (p *Probe) buildInternalTest() {
 		test := p.NewTest(file)
 
 		// only create log dir if logs are enabled.
-		if p.flags.DisableLogs == false {
+		if !p.flags.DisableLogs {
 			test.createLogDir(0)
 		}
 
@@ -87,7 +88,7 @@ func (p *Probe) buildInternalTest() {
 	}
 }
 
-// NewTest will return instance of new Test
+// NewTest will return instance of new Test.
 func (p *Probe) NewTest(file string) Test {
 	test := Test{
 		probe:    p,

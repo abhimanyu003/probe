@@ -10,7 +10,7 @@ func sendHTTPRequest(stage Stage, c *req.Client) *req.Response {
 	client := c
 
 	// only enable logger if logs are enabled.
-	if stage.test.probe.flags.DisableLogs == false {
+	if !stage.test.probe.flags.DisableLogs {
 		client = c.EnableTraceAll().EnableDumpAllToFile(stage.getLogFileName(0))
 	}
 
@@ -38,8 +38,8 @@ func sendHTTPRequest(stage Stage, c *req.Client) *req.Response {
 	if len(stage.Request.Body) > 0 {
 		r.SetBody(stage.Request.Body)
 	}
-	if len(stage.Request.BodyJson) > 0 {
-		r.SetBodyJsonString(stage.Request.BodyJson)
+	if len(stage.Request.BodyJSON) > 0 {
+		r.SetBodyJsonString(stage.Request.BodyJSON)
 	}
 	if len(stage.Request.BasicAuth.User) > 0 {
 		r.SetBasicAuth(stage.Request.BasicAuth.User, stage.Request.BasicAuth.Password)

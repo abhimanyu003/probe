@@ -516,7 +516,7 @@ func Test_runStages_BodyJSON_HappyPath(t *testing.T) {
 				Name: "Test_runStages_Body_HappyPath",
 				Request: Request{
 					Method:   "POST",
-					BodyJson: `{"bodyJSON": "JSON"}`,
+					BodyJSON: `{"bodyJSON": "JSON"}`,
 					URL:      "https://example.com",
 				},
 				Assert: Assert{

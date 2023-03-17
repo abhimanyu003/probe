@@ -3,6 +3,7 @@ package runner
 import (
 	"bytes"
 	"encoding/json"
+
 	"github.com/abhimanyu003/probe/cast"
 	"github.com/abhimanyu003/probe/jq"
 
@@ -41,19 +42,19 @@ func (b *Body) getResponseBodyAsCompactJSON() (string, error) {
 	return buffer.String(), nil
 }
 
-// getResponseBodyWithJQAsCompactJSON is only for string values
+// getResponseBodyWithJQAsCompactJSON is only for string values.
 func (b *Body) getResponseBodyWithJQAsCompactJSON() (string, error) {
-	jq, err := runJQOnResponseBody(b.assert.stage.resp.Bytes(), b.Select)
+	jqResult, err := runJQOnResponseBody(b.assert.stage.resp.Bytes(), b.Select)
 	if err != nil {
 		return "", err
 	}
 
-	switch jq.(type) {
+	switch jqResult.(type) {
 	case int, float64, float32, bool, string:
-		return spf.ToString(jq), nil
+		return spf.ToString(jqResult), nil
 	}
 
-	src, err := oj.Marshal(jq)
+	src, err := oj.Marshal(jqResult)
 	if err != nil {
 		return "", err
 	}
